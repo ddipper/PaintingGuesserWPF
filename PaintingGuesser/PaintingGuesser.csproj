@@ -104,5 +104,32 @@
   <ItemGroup>
     <Resource Include="img\exit.png" />
   </ItemGroup>
+  <ItemGroup>
+    <Resource Include="img\unnamed %281%29.jpg" />
+    <Resource Include="img\unnamed %2810%29.jpg" />
+    <Resource Include="img\unnamed %2811%29.jpg" />
+    <Resource Include="img\unnamed %2812%29.jpg" />
+    <Resource Include="img\unnamed %2813%29.jpg" />
+    <Resource Include="img\unnamed %2814%29.jpg" />
+    <Resource Include="img\unnamed %282%29.jpg" />
+    <Resource Include="img\unnamed %283%29.jpg" />
+    <Resource Include="img\unnamed %284%29.jpg" />
+    <Resource Include="img\unnamed %285%29.jpg" />
+    <Resource Include="img\unnamed %286%29.jpg" />
+    <Resource Include="img\unnamed %287%29.jpg" />
+    <Resource Include="img\unnamed %288%29.jpg" />
+    <Resource Include="img\unnamed %289%29.jpg" />
+    <Resource Include="img\unnamed.jpg" />
+    <Resource Include="img\unnamed1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="unnamed.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="unnamed1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="img\Icon.ico" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

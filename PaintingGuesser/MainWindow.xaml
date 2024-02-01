@@ -5,10 +5,11 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:PaintingGuesser"
         mc:Ignorable="d"
-        Title="PaintingGuesser" Height="550" Width="950"
+        Title="PaintingGuesser" Height="650" Width="1200"
         WindowStyle="None"
         ResizeMode="NoResize"
-        WindowStartupLocation="CenterScreen">
+        WindowStartupLocation="CenterScreen"
+        Icon="img/Icon.ico">
 
     <Window.Resources>
         <Style x:Key="FlatButtonStyle" TargetType="Button">
@@ -16,6 +17,43 @@
             <Setter Property="BorderBrush" Value="Transparent"/>
             <Setter Property="BorderThickness" Value="0"/>
         </Style>
+
+        <Style x:Key="styleCustomCheckBox" 
+       TargetType="{x:Type CheckBox}">
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="{x:Type CheckBox}">
+                        <StackPanel Orientation="Horizontal">
+                            <Image x:Name="imageCheckBox" 
+                           Width="25" 
+                           Height="25" 
+                           Margin="0,0,5,0"
+                           Source="C:\Users\dimon\Downloads\icons8-checkbox-96 (1).png"/>
+                            <ContentPresenter VerticalAlignment="Center"/>
+                        </StackPanel>
+                        <ControlTemplate.Triggers>
+                            <Trigger Property="IsChecked" Value="False">
+                                <Setter TargetName="imageCheckBox" 
+                                Property="Source" 
+                                Value="C:\Users\dimon\Downloads\icons8-unchecked-checkbox-64.png"/>
+                            </Trigger>
+                            <Trigger Property="IsChecked" Value="True">
+                                <Setter TargetName="imageCheckBox" 
+                                Property="Source"
+                                Value="C:\Users\dimon\Downloads\icons8-checkbox-96 (2).png"/>
+                            </Trigger>
+                        </ControlTemplate.Triggers>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+
+        <Style x:Key="FlatButton" TargetType="Button">
+            <Setter Property="Background" Value="Transparent"/>
+            <Setter Property="BorderBrush" Value="Transparent"/>
+            <Setter Property="BorderThickness" Value="0"/>
+        </Style>
+
     </Window.Resources>
 
     <Grid>
@@ -31,11 +69,198 @@
                 <Image Source="img/exit.png"/>
             </Button>
 
-            <Label Name="labelName" Content="Painting Guesser" FontFamily="Cascadia Mono" HorizontalAlignment="Left" Margin="5,0" VerticalAlignment="Center" FontSize="14" />
+            <Label 
+                Name="labelName"
+                Content="Painting Guesser"
+                FontFamily="Cascadia Mono" 
+                HorizontalAlignment="Left" 
+                Margin="5,0" 
+                VerticalAlignment="Center" 
+                FontSize="14" 
+             />
         </Grid>
 
-        <Grid Grid.Row="1" Background="#bbdefb">
-            <!-- код здесь -->
+        <!-- start -->
+        <Grid Grid.Row="1" Visibility="Hidden" Background="#3f51b5" x:Name="gridStart">
+            <Label 
+                FontFamily="Cascadia Mono" 
+                FontSize="20" 
+                Foreground="#bbdefb"
+                HorizontalAlignment="Center"
+                HorizontalContentAlignment="Stretch"
+                VerticalAlignment="Center" Width="850" Height="216">
+                <TextBlock TextWrapping="Wrap" Height="210" Margin="28,0,14,0"><Run Text="В каждом вопросе вам будет показана картина, на которой изображен какой-то предмет, животное, растение или пейзаж. Под картиной будут "/><Run Language="ru-ru" Text="несколько"/><Run Text=" вариант"/><Run Language="ru-ru" Text="ов "/><Run Text="ответа. Вы должны выбрать т"/><Run Language="ru-ru" Text="е"/><Run Text=" вариант"/><Run Language="ru-ru" Text="ы"/><Run Text=", которы"/><Run Language="ru-ru" Text="е"/><Run Text=" наиболее точно отража"/><Run Language="ru-ru" Text="ю"/><Run Text="т смысл или идею, которую хотел передать художник, нарисовав эту картину."/><Run Language="ru-ru" Text=" "/><Run Language="ru-ru" Text="Если вы выберите правильные варианты, то узнаете "/><Run Text="интересную информацию о художниках, чьи картины были использованы в тесте, и об их стиле и вдохновении. Готовы начать? Тогда жмите на кнопку “Старт” и погрузитесь в мир искусства!"/></TextBlock>
+            </Label>
+
+            <Label 
+                FontSize="45" 
+                FontFamily="Cascadia Mono" 
+                Content="Правила" 
+                Foreground="White"
+                HorizontalAlignment="Center" 
+                HorizontalContentAlignment="Center"
+                Margin="0,97,0,0" 
+                VerticalAlignment="Top" 
+                Height="58" 
+                Width="208"/>
+
+
+
+            <Button x:Name="buttonStart"
+                Content="Старт" 
+                HorizontalAlignment="Center" 
+                Background="White"
+                Foreground="#3f51b5"
+                FontFamily="Cascadia Mono"
+                FontSize="27"
+                FontWeight="Bold"
+                Margin="0,448,0,0" 
+                VerticalAlignment="Top" 
+                Width="146" 
+                Height="50"
+                Style="{StaticResource FlatButton}" Click="buttonStart_Click"/>
+
+        </Grid>
+
+        <!-- first -->
+        <Grid Grid.Row="1" Visibility="Visible" Background="#3f51b5" x:Name="grid1">
+            <Image HorizontalAlignment="Left" Margin="759,46,0,0" VerticalAlignment="Top" Source="/unnamed.jpg" Height="214" Width="220"/>
+            <Image HorizontalAlignment="Left" Margin="211,46,0,0" VerticalAlignment="Top" Source="/unnamed1.jpg" Height="213" Width="290"/>
+
+            <CheckBox x:Name="checkStart"
+                Content="Слушать внимательно"
+                Foreground="#ffffff"
+                FontFamily="Cascadia Mono" 
+                FontSize="20" 
+                HorizontalAlignment="Left"
+                Margin="211,318,0,0"
+                VerticalAlignment="Top" 
+                Checked="checkStart_Checked" 
+                Unchecked="checkStart_Unchecked"
+                Style="{StaticResource styleCustomCheckBox}" Width="270" Height="26"/>
+
+            <CheckBox x:Name="checkStart_Copy"
+                Content="Уважать учителя"
+                Foreground="#ffffff"
+                FontFamily="Cascadia Mono" 
+                FontSize="20" 
+                HorizontalAlignment="Left"
+                Margin="211,349,0,0"
+                VerticalAlignment="Top" 
+                Checked="checkStart_Checked" 
+                Unchecked="checkStart_Unchecked"
+                Style="{StaticResource styleCustomCheckBox}" Width="270" Height="26" />
+
+            <CheckBox x:Name="checkStart_Copy1"
+                Content="Желание учиться"
+                Foreground="#ffffff"
+                FontFamily="Cascadia Mono" 
+                FontSize="20" 
+                HorizontalAlignment="Left"
+                Margin="759,380,0,0"
+                VerticalAlignment="Top" 
+                Checked="checkStart_Checked" 
+                Unchecked="checkStart_Unchecked"
+                Style="{StaticResource styleCustomCheckBox}" Width="285" Height="26" />
+
+            <CheckBox x:Name="checkStart_Copy2"
+                Content="Доброжелательность"
+                Foreground="#ffffff"
+                FontFamily="Cascadia Mono" 
+                FontSize="20" 
+                HorizontalAlignment="Left"
+                Margin="211,411,0,0"
+                VerticalAlignment="Top" 
+                Checked="checkStart_Checked" 
+                Unchecked="checkStart_Unchecked"
+                Style="{StaticResource styleCustomCheckBox}" Width="285" Height="26" />
+
+            <CheckBox x:Name="checkStart_Copy3"
+                Content="Зубрить"
+                Foreground="#ffffff"
+                FontFamily="Cascadia Mono" 
+                FontSize="20" 
+                HorizontalAlignment="Left"
+                Margin="211,442,0,0"
+                VerticalAlignment="Top" 
+                Checked="checkStart_Checked" 
+                Unchecked="checkStart_Unchecked"
+                Style="{StaticResource styleCustomCheckBox}" Width="285" Height="26" />
+
+            <CheckBox x:Name="checkStart_Copy4"
+                Content="Бедные дети вынуждены стоять"
+                Foreground="#ffffff"
+                FontFamily="Cascadia Mono" 
+                FontSize="20" 
+                HorizontalAlignment="Left"
+                Margin="759,318,0,0"
+                VerticalAlignment="Top" 
+                Checked="checkStart_Checked" 
+                Unchecked="checkStart_Unchecked"
+                Style="{StaticResource styleCustomCheckBox}" Width="270" Height="26"/>
+
+            <CheckBox x:Name="checkStart_Copy5"
+                Content="Хочу убежать"
+                Foreground="#ffffff"
+                FontFamily="Cascadia Mono" 
+                FontSize="20" 
+                HorizontalAlignment="Left"
+                Margin="759,348,0,0"
+                VerticalAlignment="Top" 
+                Checked="checkStart_Checked" 
+                Unchecked="checkStart_Unchecked"
+                Style="{StaticResource styleCustomCheckBox}" Width="270" Height="26"/>
+
+            <CheckBox x:Name="checkStart_Copy6"
+                Content="Злой учитель"
+                Foreground="#ffffff"
+                FontFamily="Cascadia Mono" 
+                FontSize="20" 
+                HorizontalAlignment="Left"
+                Margin="211,380,0,0"
+                VerticalAlignment="Top" 
+                Checked="checkStart_Checked" 
+                Unchecked="checkStart_Unchecked"
+                Style="{StaticResource styleCustomCheckBox}" Width="270" Height="26" />
+
+            <CheckBox x:Name="checkStart_Copy7"
+                Content="Дети небогатые"
+                Foreground="#ffffff"
+                FontFamily="Cascadia Mono" 
+                FontSize="20" 
+                HorizontalAlignment="Left"
+                Margin="759,410,0,0"
+                VerticalAlignment="Top" 
+                Checked="checkStart_Checked" 
+                Unchecked="checkStart_Unchecked"
+                Style="{StaticResource styleCustomCheckBox}" Width="285" Height="26" />
+
+            <CheckBox x:Name="checkStart_Copy8"
+                Content="Не люблю географию"
+                Foreground="#ffffff"
+                FontFamily="Cascadia Mono" 
+                FontSize="20" 
+                HorizontalAlignment="Left"
+                Margin="759,442,0,0"
+                VerticalAlignment="Top" 
+                Checked="checkStart_Checked" 
+                Unchecked="checkStart_Unchecked"
+                Style="{StaticResource styleCustomCheckBox}" Width="285" Height="26" />
+
         </Grid>
     </Grid>
 </Window>
+
+
+<!-- <CheckBox x:Name="checkStart"
+    Content="Я прочитал(а) правила"
+    Foreground="#ffffff"
+    FontFamily="Cascadia Mono" 
+    FontSize="16" 
+    HorizontalAlignment="Center"
+    Margin="0,343,0,0"
+    VerticalAlignment="Top" 
+    Checked="checkStart_Checked" 
+    Unchecked="checkStart_Unchecked"
+    Style="{StaticResource styleCustomCheckBox}" Width="228" />
+-->

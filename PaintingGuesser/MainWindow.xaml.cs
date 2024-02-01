@@ -32,6 +32,20 @@ namespace PaintingGuesser
             Application.Current.Shutdown();
         }
 
+        private void checkStart_Checked(object sender, RoutedEventArgs e)
+        {
+            Console.WriteLine("Checkbox is checked.");
+        }
 
+        private void checkStart_Unchecked(object sender, RoutedEventArgs e)
+        {
+            Console.WriteLine("Checkbox is unchecked.");
+        }
+
+        private void buttonStart_Click(object sender, RoutedEventArgs e)
+        {
+            gridStart.Visibility = Visibility.Hidden;
+            grid1.Visibility = Visibility.Visible;
+        }
     }
 }

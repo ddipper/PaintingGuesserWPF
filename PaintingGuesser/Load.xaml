@@ -8,9 +8,10 @@
         Title="Loading" Height="300" Width="500"
         WindowStyle="None"
         ResizeMode="NoResize"
-        WindowStartupLocation="CenterScreen">
+        WindowStartupLocation="CenterScreen"
+        Icon="img/Icon.ico">
 
-    <Grid Background="#bbdefb">
+    <Grid Background="#3f51b5">
         <!--<ProgressBar Minimum="0" Maximum="100"  Value="20"  Background="LightGray" IsIndeterminate="False"  HorizontalAlignment="Center" Height="10" Margin="0,150,0,0" VerticalAlignment="Top" Width="250"/> -->
 
         <ProgressBar Margin="74,250,26,10" x:Name="progressLoad">
@@ -35,7 +36,7 @@
                                         HorizontalAlignment="Left" 
                                         RadiusX="10" 
                                         RadiusY="10" 
-                                        Fill="#3f51b5" 
+                                        Fill="#bbdefb" 
                                         Margin="5">
 
                                     </Rectangle>
@@ -50,7 +51,7 @@
         <Label
             x:Name="labelLoading"
             Content="Загрузка" 
-            Foreground="#3f51b5"
+            Foreground="#bbdefb"
             FontWeight="Black"
             FontSize="25" 
             FontFamily="Cascadia Mono" 
@@ -78,7 +79,7 @@
         <Label
             x:Name="labelPersent"
             Content="21%" 
-            Foreground="#3f51b5"
+            Foreground="#bbdefb"
             FontSize="20" 
             FontWeight="Bold"
             FontFamily="Cascadia Mono" 
