@@ -28,19 +28,19 @@
                            Width="25" 
                            Height="25" 
                            Margin="0,0,5,0"
-                           Source="C:\Users\dimon\Downloads\icons8-checkbox-96 (1).png"/>
+                           Source="img/icons8-checkbox-96 (1).png"/>
                             <ContentPresenter VerticalAlignment="Center"/>
                         </StackPanel>
                         <ControlTemplate.Triggers>
                             <Trigger Property="IsChecked" Value="False">
                                 <Setter TargetName="imageCheckBox" 
                                 Property="Source" 
-                                Value="C:\Users\dimon\Downloads\icons8-unchecked-checkbox-64.png"/>
+                                Value="img/icons8-unchecked-checkbox-64.png"/>
                             </Trigger>
                             <Trigger Property="IsChecked" Value="True">
                                 <Setter TargetName="imageCheckBox" 
                                 Property="Source"
-                                Value="C:\Users\dimon\Downloads\icons8-checkbox-96 (2).png"/>
+                                Value="img/icons8-checkbox-96 (2).png"/>
                             </Trigger>
                         </ControlTemplate.Triggers>
                     </ControlTemplate>
@@ -81,7 +81,7 @@
         </Grid>
 
         <!-- start -->
-        <Grid Grid.Row="1" Visibility="Hidden" Background="#3f51b5" x:Name="gridStart">
+        <Grid Grid.Row="1" Visibility="Visible" Background="#3f51b5" x:Name="gridStart">
             <Label 
                 FontFamily="Cascadia Mono" 
                 FontSize="20" 
@@ -123,7 +123,7 @@
         </Grid>
 
         <!-- first -->
-        <Grid Grid.Row="1" Visibility="Visible" Background="#3f51b5" x:Name="grid1">
+        <Grid Grid.Row="1" Visibility="Hidden" Background="#3f51b5" x:Name="grid1">
             <Image HorizontalAlignment="Left" Margin="759,46,0,0" VerticalAlignment="Top" Source="/unnamed.jpg" Height="214" Width="220"/>
             <Image HorizontalAlignment="Left" Margin="211,46,0,0" VerticalAlignment="Top" Source="/unnamed1.jpg" Height="213" Width="290"/>
 

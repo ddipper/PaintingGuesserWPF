@@ -131,5 +131,14 @@
   <ItemGroup>
     <Resource Include="img\Icon.ico" />
   </ItemGroup>
+  <ItemGroup>
+    <Resource Include="img\icons8-checkbox-96 %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="img\icons8-unchecked-checkbox-64.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="img\icons8-checkbox-96 %282%29.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
