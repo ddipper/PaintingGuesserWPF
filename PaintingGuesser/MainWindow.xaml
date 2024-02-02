@@ -81,7 +81,7 @@
         </Grid>
 
         <!-- start -->
-        <Grid Grid.Row="1" Visibility="Visible" Background="#3f51b5" x:Name="gridStart">
+        <Grid Grid.Row="1" Visibility="Hidden" Background="#3f51b5" x:Name="gridStart">
             <Label 
                 FontFamily="Cascadia Mono" 
                 FontSize="20" 
@@ -122,132 +122,179 @@
 
         </Grid>
 
-        <!-- first -->
-        <Grid Grid.Row="1" Visibility="Hidden" Background="#3f51b5" x:Name="grid1">
-            <Image HorizontalAlignment="Left" Margin="759,46,0,0" VerticalAlignment="Top" Source="/unnamed.jpg" Height="214" Width="220"/>
-            <Image HorizontalAlignment="Left" Margin="211,46,0,0" VerticalAlignment="Top" Source="/unnamed1.jpg" Height="213" Width="290"/>
+        <!-- 1 first -->
+        <Grid Grid.Row="1" Visibility="Visible" Background="#3f51b5" x:Name="grid1">
+            <Grid Margin="0,0,0,330" Background="White">
+                <Image HorizontalAlignment="Left" Margin="790,0,0,0" VerticalAlignment="Center" Source="/unnamed.jpg" Height="214" Width="220"/>
+                <Image HorizontalAlignment="Left" Margin="186,0,0,0" VerticalAlignment="Center" Source="/unnamed1.jpg" Height="213" Width="290"/>
+            </Grid>
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="71*"/>
+                    <ColumnDefinition Width="1130*"/>
+                </Grid.ColumnDefinitions>
 
-            <CheckBox x:Name="checkStart"
-                Content="Слушать внимательно"
-                Foreground="#ffffff"
-                FontFamily="Cascadia Mono" 
-                FontSize="20" 
-                HorizontalAlignment="Left"
-                Margin="211,318,0,0"
-                VerticalAlignment="Top" 
-                Checked="checkStart_Checked" 
-                Unchecked="checkStart_Unchecked"
-                Style="{StaticResource styleCustomCheckBox}" Width="270" Height="26"/>
+                <CheckBox
+                    Content="Слушать внимательно"
+                    Foreground="#ffffff"
+                    FontFamily="Cascadia Mono" 
+                    FontSize="20" 
+                    HorizontalAlignment="Left"
+                    Margin="118,308,0,0"
+                    VerticalAlignment="Top" 
+                    Checked="Correct_Select" 
+                    Unchecked="Correct_Unselect"
+                    Style="{StaticResource styleCustomCheckBox}" Width="270" Height="26" Grid.Column="1"/>
 
-            <CheckBox x:Name="checkStart_Copy"
-                Content="Уважать учителя"
-                Foreground="#ffffff"
-                FontFamily="Cascadia Mono" 
-                FontSize="20" 
-                HorizontalAlignment="Left"
-                Margin="211,349,0,0"
-                VerticalAlignment="Top" 
-                Checked="checkStart_Checked" 
-                Unchecked="checkStart_Unchecked"
-                Style="{StaticResource styleCustomCheckBox}" Width="270" Height="26" />
+                <CheckBox
+                    Content="Уважать учителя"
+                    Foreground="#ffffff"
+                    FontFamily="Cascadia Mono" 
+                    FontSize="20" 
+                    HorizontalAlignment="Left"
+                    Margin="424,308,0,0"
+                    VerticalAlignment="Top" 
+                    Checked="Correct_Select" 
+                    Unchecked="Correct_Unselect"
+                    Style="{StaticResource styleCustomCheckBox}" Width="215" Height="26" Grid.Column="1" />
 
-            <CheckBox x:Name="checkStart_Copy1"
-                Content="Желание учиться"
-                Foreground="#ffffff"
-                FontFamily="Cascadia Mono" 
-                FontSize="20" 
-                HorizontalAlignment="Left"
-                Margin="759,380,0,0"
-                VerticalAlignment="Top" 
-                Checked="checkStart_Checked" 
-                Unchecked="checkStart_Unchecked"
-                Style="{StaticResource styleCustomCheckBox}" Width="285" Height="26" />
+                <CheckBox
+                    Content="Желание учиться"
+                    Foreground="#ffffff"
+                    FontFamily="Cascadia Mono" 
+                    FontSize="20" 
+                    HorizontalAlignment="Left"
+                    Margin="424,339,0,0"
+                    VerticalAlignment="Top" 
+                    Checked="Correct_Select" 
+                    Unchecked="Correct_Unselect"
+                    Style="{StaticResource styleCustomCheckBox}" Width="237" Height="26" Grid.Column="1" />
 
-            <CheckBox x:Name="checkStart_Copy2"
-                Content="Доброжелательность"
-                Foreground="#ffffff"
-                FontFamily="Cascadia Mono" 
-                FontSize="20" 
-                HorizontalAlignment="Left"
-                Margin="211,411,0,0"
-                VerticalAlignment="Top" 
-                Checked="checkStart_Checked" 
-                Unchecked="checkStart_Unchecked"
-                Style="{StaticResource styleCustomCheckBox}" Width="285" Height="26" />
+                <CheckBox
+                    Content="Доброжелательность"
+                    Foreground="#ffffff"
+                    FontFamily="Cascadia Mono" 
+                    FontSize="20" 
+                    HorizontalAlignment="Left"
+                    Margin="118,370,0,0"
+                    VerticalAlignment="Top" 
+                    Checked="Correct_Select" 
+                    Unchecked="Correct_Unselect"
+                    Style="{StaticResource styleCustomCheckBox}" Width="270" Height="26" Grid.Column="1" />
 
-            <CheckBox x:Name="checkStart_Copy3"
-                Content="Зубрить"
-                Foreground="#ffffff"
-                FontFamily="Cascadia Mono" 
-                FontSize="20" 
-                HorizontalAlignment="Left"
-                Margin="211,442,0,0"
-                VerticalAlignment="Top" 
-                Checked="checkStart_Checked" 
-                Unchecked="checkStart_Unchecked"
-                Style="{StaticResource styleCustomCheckBox}" Width="285" Height="26" />
+                <CheckBox
+                    Content="Зубрить"
+                    Foreground="#ffffff"
+                    FontFamily="Cascadia Mono" 
+                    FontSize="20" 
+                    HorizontalAlignment="Left"
+                    Margin="424,370,0,0"
+                    VerticalAlignment="Top" 
+                    Checked="Select" 
+                    Unchecked="Unselect"
+                    Style="{StaticResource styleCustomCheckBox}" Width="210" Height="26" Grid.Column="1" />
 
-            <CheckBox x:Name="checkStart_Copy4"
-                Content="Бедные дети вынуждены стоять"
-                Foreground="#ffffff"
-                FontFamily="Cascadia Mono" 
-                FontSize="20" 
-                HorizontalAlignment="Left"
-                Margin="759,318,0,0"
-                VerticalAlignment="Top" 
-                Checked="checkStart_Checked" 
-                Unchecked="checkStart_Unchecked"
-                Style="{StaticResource styleCustomCheckBox}" Width="270" Height="26"/>
+                <CheckBox
+                    Content="Хочу убежать"
+                    Foreground="#ffffff"
+                    FontFamily="Cascadia Mono" 
+                    FontSize="20" 
+                    HorizontalAlignment="Left"
+                    Margin="694,339,0,0"
+                    VerticalAlignment="Top" 
+                    Checked="Select" 
+                    Unchecked="Unselect"
+                    Style="{StaticResource styleCustomCheckBox}" Width="244" Height="26" Grid.Column="1"/>
 
-            <CheckBox x:Name="checkStart_Copy5"
-                Content="Хочу убежать"
-                Foreground="#ffffff"
-                FontFamily="Cascadia Mono" 
-                FontSize="20" 
-                HorizontalAlignment="Left"
-                Margin="759,348,0,0"
-                VerticalAlignment="Top" 
-                Checked="checkStart_Checked" 
-                Unchecked="checkStart_Unchecked"
-                Style="{StaticResource styleCustomCheckBox}" Width="270" Height="26"/>
+                <CheckBox
+                    Content="Злой учитель"
+                    Foreground="#ffffff"
+                    FontFamily="Cascadia Mono" 
+                    FontSize="20" 
+                    HorizontalAlignment="Left"
+                    Margin="118,339,0,0"
+                    VerticalAlignment="Top" 
+                    Checked="Select" 
+                    Unchecked="Unselect"
+                    Style="{StaticResource styleCustomCheckBox}" Width="270" Height="26" Grid.Column="1" />
 
-            <CheckBox x:Name="checkStart_Copy6"
-                Content="Злой учитель"
-                Foreground="#ffffff"
-                FontFamily="Cascadia Mono" 
-                FontSize="20" 
-                HorizontalAlignment="Left"
-                Margin="211,380,0,0"
-                VerticalAlignment="Top" 
-                Checked="checkStart_Checked" 
-                Unchecked="checkStart_Unchecked"
-                Style="{StaticResource styleCustomCheckBox}" Width="270" Height="26" />
+                <CheckBox
+                    Content="Дети небогатые"
+                    Foreground="#ffffff"
+                    FontFamily="Cascadia Mono" 
+                    FontSize="20" 
+                    HorizontalAlignment="Left"
+                    Margin="694,370,0,0"
+                    VerticalAlignment="Top" 
+                    Checked="Select" 
+                    Unchecked="Unselect"
+                    Style="{StaticResource styleCustomCheckBox}" Width="243" Height="26" Grid.Column="1" />
 
-            <CheckBox x:Name="checkStart_Copy7"
-                Content="Дети небогатые"
-                Foreground="#ffffff"
-                FontFamily="Cascadia Mono" 
-                FontSize="20" 
-                HorizontalAlignment="Left"
-                Margin="759,410,0,0"
-                VerticalAlignment="Top" 
-                Checked="checkStart_Checked" 
-                Unchecked="checkStart_Unchecked"
-                Style="{StaticResource styleCustomCheckBox}" Width="285" Height="26" />
+                <CheckBox
+                    Content="Не люблю географию"
+                    Foreground="#ffffff"
+                    FontFamily="Cascadia Mono" 
+                    FontSize="20" 
+                    HorizontalAlignment="Left"
+                    Margin="694,308,0,0"
+                    VerticalAlignment="Top" 
+                    Checked="Select" 
+                    Unchecked="Unselect"
+                    Style="{StaticResource styleCustomCheckBox}" Width="244" Height="26" Grid.Column="1" />
 
-            <CheckBox x:Name="checkStart_Copy8"
-                Content="Не люблю географию"
-                Foreground="#ffffff"
-                FontFamily="Cascadia Mono" 
-                FontSize="20" 
-                HorizontalAlignment="Left"
-                Margin="759,442,0,0"
-                VerticalAlignment="Top" 
-                Checked="checkStart_Checked" 
-                Unchecked="checkStart_Unchecked"
-                Style="{StaticResource styleCustomCheckBox}" Width="285" Height="26" />
+
+                <Button x:Name="buttonCheck1"
+                    Content="Проверить" 
+                    HorizontalAlignment="Left" 
+                    Background="White"
+                    Foreground="#3f51b5"
+                    FontFamily="Cascadia Mono"
+                    FontSize="27"
+                    FontWeight="Bold"
+                    Margin="283,439,0,0" 
+                    VerticalAlignment="Top" 
+                    Width="210" 
+                    Height="50"
+                    Style="{StaticResource FlatButton}" 
+                    Click="ButtonCheck1_Click" 
+                    Grid.Column="1"/>
+
+                <Button x:Name="buttonNext1"
+                    Content="-" 
+                    IsEnabled="False"
+                    HorizontalAlignment="Left" 
+                    Background="White"
+                    Foreground="#3f51b5"
+                    FontFamily="Cascadia Mono"
+                    FontSize="27"
+                    FontWeight="Bold"
+                    Margin="573,439,0,0" 
+                    VerticalAlignment="Top" 
+                    Width="210" 
+                    Height="50"
+                    Style="{StaticResource FlatButton}"  
+                    Grid.Column="1"/>
+
+            </Grid>
+
 
         </Grid>
+
+        <TextBlock x:Name="textBlock"
+                x:Uid="textBlock"
+                HorizontalAlignment="Center" 
+                Margin="0,522,0,0" 
+                TextWrapping="Wrap" 
+                Foreground="#ffffff"
+                FontFamily="Cascadia Mono" 
+                FontSize="20" 
+                Text="Увы, вы не отгадали ассоциации (
+"               TextAlignment="Center"
+                VerticalAlignment="Top" 
+                Width="820"
+                Grid.Row="1"/>
+        <!-- 2 second -->
+
     </Grid>
 </Window>
 
