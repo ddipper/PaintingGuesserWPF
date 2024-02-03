@@ -105,16 +105,16 @@
     <Resource Include="img\exit.png" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="img\unnamed %281%29.jpg" />
-    <Resource Include="img\unnamed %2810%29.jpg" />
-    <Resource Include="img\unnamed %2811%29.jpg" />
-    <Resource Include="img\unnamed %2812%29.jpg" />
-    <Resource Include="img\unnamed %2813%29.jpg" />
-    <Resource Include="img\unnamed %2814%29.jpg" />
-    <Resource Include="img\unnamed %282%29.jpg" />
-    <Resource Include="img\unnamed %283%29.jpg" />
-    <Resource Include="img\unnamed %284%29.jpg" />
-    <Resource Include="img\unnamed %285%29.jpg" />
+    <Resource Include="img\img3.jpg" />
+    <Resource Include="img\img9.jpg" />
+    <Resource Include="img\img10.jpg" />
+    <Resource Include="img\img11.jpg" />
+    <Resource Include="img\img6.jpg" />
+    <Resource Include="img\img12.jpg" />
+    <Resource Include="img\img4.jpg" />
+    <Resource Include="img\img7.jpg" />
+    <Resource Include="img\img8.jpg" />
+    <Resource Include="img\img13.jpg" />
     <Resource Include="img\unnamed %286%29.jpg" />
     <Resource Include="img\unnamed %287%29.jpg" />
     <Resource Include="img\unnamed %288%29.jpg" />
