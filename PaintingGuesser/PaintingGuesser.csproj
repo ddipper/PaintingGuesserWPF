@@ -115,10 +115,10 @@
     <Resource Include="img\img7.jpg" />
     <Resource Include="img\img8.jpg" />
     <Resource Include="img\img13.jpg" />
-    <Resource Include="img\unnamed %286%29.jpg" />
-    <Resource Include="img\unnamed %287%29.jpg" />
-    <Resource Include="img\unnamed %288%29.jpg" />
-    <Resource Include="img\unnamed %289%29.jpg" />
+    <Resource Include="img\img14.jpg" />
+    <Resource Include="img\img15.jpg" />
+    <Resource Include="img\img16.jpg" />
+    <Resource Include="img\img17.jpg" />
     <Resource Include="img\unnamed.jpg" />
     <Resource Include="img\unnamed1.jpg" />
   </ItemGroup>

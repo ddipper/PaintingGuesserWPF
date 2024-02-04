@@ -401,7 +401,107 @@ namespace PaintingGuesser
         private void ButtonNext6_Click(object sender, RoutedEventArgs e)
         {
             grid6.Visibility = Visibility.Hidden;
-            grid6.Visibility = Visibility.Visible;
+            grid7.Visibility = Visibility.Visible;
+
+            textBlock.Text = "";
+        }
+
+
+
+        // ------------------------------ 7 SEVENTH
+        private void ButtonCheck7_Click(object sender, RoutedEventArgs e)
+        {
+            if (correct >= 2)
+            {
+                DisableCheckBox(sender);
+                (sender as Button).IsEnabled = false;
+
+                textBlock.TextAlignment = TextAlignment.Center;
+                textBlock.Text = "Познай самого себя (Сократ)";
+
+                buttonNext7.Content = "Дальше";
+                buttonNext7.IsEnabled = true;
+
+                total = 0;
+                correct = 0;
+
+                return;
+            }
+
+            else if (total == 0)
+            {
+                MessageBox.Show("Вы ничего не выбрали.", "Painting Guesser");
+
+                return;
+            }
+
+            else
+            {
+                DisableCheckBox(sender);
+
+                textBlock.TextAlignment = TextAlignment.Center;
+                textBlock.Text = "Увы, вы не отгадали ассоциации, можете попробовать еще раз.";
+
+                total = 0;
+                correct = 0;
+
+                return;
+            }
+        }
+        private void ButtonNext7_Click(object sender, RoutedEventArgs e)
+        {
+            grid7.Visibility = Visibility.Hidden;
+            grid8.Visibility = Visibility.Visible;
+
+            textBlock.Text = "";
+        }
+
+
+
+        // ------------------------------ 8 EIGTH
+        private void ButtonCheck8_Click(object sender, RoutedEventArgs e)
+        {
+            if (correct >= 2)
+            {
+                DisableCheckBox(sender);
+                (sender as Button).IsEnabled = false;
+
+                textBlock.TextAlignment = TextAlignment.Center;
+                textBlock.Text = "Быть собой – ключ к любой двери (Современный совет психолога)";
+
+                buttonNext8.Content = "Дальше";
+                buttonNext8.IsEnabled = true;
+
+                total = 0;
+                correct = 0;
+
+                return;
+            }
+
+            else if (total == 0)
+            {
+                MessageBox.Show("Вы ничего не выбрали.", "Painting Guesser");
+
+                return;
+            }
+
+            else
+            {
+                DisableCheckBox(sender);
+
+                textBlock.TextAlignment = TextAlignment.Center;
+                textBlock.Text = "Увы, вы не отгадали ассоциации, можете попробовать еще раз.";
+
+                total = 0;
+                correct = 0;
+
+                return;
+            }
+        }
+        private void ButtonNext8_Click(object sender, RoutedEventArgs e)
+        {
+            grid8.Visibility = Visibility.Hidden;
+            gridEnd.Visibility = Visibility.Visible;
 
             textBlock.Text = "";
         }

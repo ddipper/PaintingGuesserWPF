@@ -81,16 +81,18 @@
         </Grid>
 
         <!-- start -->
-        <Grid Grid.Row="1" Visibility="Hidden" Background="#3f51b5" x:Name="gridStart">
-            <Label 
+        <Grid Grid.Row="1" Visibility="Visible" Background="#3f51b5" x:Name="gridStart">
+
+            <TextBlock 
+                TextWrapping="Wrap" 
+                Foreground="#bbdefb"
                 FontFamily="Cascadia Mono" 
                 FontSize="20" 
-                Foreground="#bbdefb"
                 HorizontalAlignment="Center"
-                HorizontalContentAlignment="Stretch"
-                VerticalAlignment="Center" Width="850" Height="216">
-                <TextBlock TextWrapping="Wrap" Height="210" Margin="28,0,14,0"><Run Text="В каждом вопросе вам будет показана картина, на которой изображен какой-то предмет, животное, растение или пейзаж. Под картиной будут "/><Run Language="ru-ru" Text="несколько"/><Run Text=" вариант"/><Run Language="ru-ru" Text="ов "/><Run Text="ответа. Вы должны выбрать т"/><Run Language="ru-ru" Text="е"/><Run Text=" вариант"/><Run Language="ru-ru" Text="ы"/><Run Text=", которы"/><Run Language="ru-ru" Text="е"/><Run Text=" наиболее точно отража"/><Run Language="ru-ru" Text="ю"/><Run Text="т смысл или идею, которую хотел передать художник, нарисовав эту картину."/><Run Language="ru-ru" Text=" "/><Run Language="ru-ru" Text="Если вы выберите правильные варианты, то узнаете "/><Run Text="интересную информацию о художниках, чьи картины были использованы в тесте, и об их стиле и вдохновении. Готовы начать? Тогда жмите на кнопку “Старт” и погрузитесь в мир искусства!"/></TextBlock>
-            </Label>
+                Text="В каждом вопросе вам будет показана картина, на которой изображен какой-то предмет, животное, растение или пейзаж. Под картиной будут несколько вариантов ответа. Вы должны выбрать те варианты, которые наиболее точно отражают смысл или идею, которую хотел передать художник, нарисовав эту картину. Если вы выберите правильные варианты, то узнаете интересную информацию о художниках, чьи картины были использованы в тесте, и об их стиле и вдохновении. Готовы начать? Тогда жмите на кнопку “Старт” и погрузитесь в мир искусства!"
+                TextAlignment="Justify"
+                VerticalAlignment="Top" 
+                Width="820" Height="196" Margin="0,206,0,0"/>
 
             <Label 
                 FontSize="45" 
@@ -921,7 +923,7 @@
 
 
         <!-- 6 sixth -->
-        <Grid Grid.Row="1" Visibility="Visible" Background="#3f51b5" x:Name="grid6">
+        <Grid Grid.Row="1" Visibility="Hidden" Background="#3f51b5" x:Name="grid6">
             <Grid Margin="0,0,0,330" Background="White">
                 <Image HorizontalAlignment="Left" Margin="814,0,0,0" VerticalAlignment="Center" Source="img/img12.jpg" Height="262" Width="208"/>
                 <Image HorizontalAlignment="Left" Margin="192,0,0,0" VerticalAlignment="Center" Source="img/img13.jpg" Height="232" Width="322"/>
@@ -1076,6 +1078,376 @@
 
             </Grid>
         </Grid>
+
+
+        <!-- 7 seventh -->
+        <Grid Grid.Row="1" Visibility="Hidden" Background="#3f51b5" x:Name="grid7">
+            <Grid Margin="0,0,0,330" Background="White">
+                <Image HorizontalAlignment="Left" Margin="751,0,0,0" VerticalAlignment="Center" Source="img/img14.jpg" Height="214" Width="271"/>
+                <Image HorizontalAlignment="Left" Margin="192,0,0,0" VerticalAlignment="Center" Source="img/img15.jpg" Height="198" Width="322"/>
+            </Grid>
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="71*"/>
+                    <ColumnDefinition Width="1130*"/>
+                </Grid.ColumnDefinitions>
+
+                <CheckBox
+                    Content="Темно и тихо"
+                    Foreground="#ffffff"
+                    FontFamily="Cascadia Mono" 
+                    FontSize="20" 
+                    HorizontalAlignment="Left"
+                    Margin="118,308,0,0"
+                    VerticalAlignment="Top" 
+                    Checked="Correct_Select" 
+                    Unchecked="Correct_Unselect"
+                    Style="{StaticResource styleCustomCheckBox}" Width="270" Height="26" Grid.Column="1"/>
+
+                <CheckBox
+                    Content="Искусство"
+                    Foreground="#ffffff"
+                    FontFamily="Cascadia Mono" 
+                    FontSize="20" 
+                    HorizontalAlignment="Left"
+                    Margin="424,308,0,0"
+                    VerticalAlignment="Top" 
+                    Checked="Select" 
+                    Unchecked="Unselect"
+                    Style="{StaticResource styleCustomCheckBox}" Width="254" Height="26" Grid.Column="1" />
+
+                <CheckBox
+                    Content="Душа рождает свет"
+                    Foreground="#ffffff"
+                    FontFamily="Cascadia Mono" 
+                    FontSize="20" 
+                    HorizontalAlignment="Left"
+                    Margin="424,339,0,0"
+                    VerticalAlignment="Top" 
+                    Checked="Correct_Select" 
+                    Unchecked="Correct_Unselect"
+                    Style="{StaticResource styleCustomCheckBox}" Width="285" Height="26" Grid.Column="1" />
+
+                <CheckBox
+                    Content="Легкость из души"
+                    Foreground="#ffffff"
+                    FontFamily="Cascadia Mono" 
+                    FontSize="20" 
+                    HorizontalAlignment="Left"
+                    Margin="118,370,0,0"
+                    VerticalAlignment="Top" 
+                    Checked="Correct_Select" 
+                    Unchecked="Correct_Unselect"
+                    Style="{StaticResource styleCustomCheckBox}" Width="270" Height="26" Grid.Column="1" />
+
+                <CheckBox
+                    Content="Пианино в лесу"
+                    Foreground="#ffffff"
+                    FontFamily="Cascadia Mono" 
+                    FontSize="20" 
+                    HorizontalAlignment="Left"
+                    Margin="424,370,0,0"
+                    VerticalAlignment="Top" 
+                    Checked="Select" 
+                    Unchecked="Unselect"
+                    Style="{StaticResource styleCustomCheckBox}" Width="237" Height="26" Grid.Column="1" />
+
+                <CheckBox
+                    Content="Наполненность"
+                    Foreground="#ffffff"
+                    FontFamily="Cascadia Mono" 
+                    FontSize="20" 
+                    HorizontalAlignment="Left"
+                    Margin="714,339,0,0"
+                    VerticalAlignment="Top" 
+                    Checked="Correct_Select" 
+                    Unchecked="Correct_Unselect"
+                    Style="{StaticResource styleCustomCheckBox}" Width="335" Height="26" Grid.Column="1"/>
+
+                <CheckBox
+                    Content="Неуютно"
+                    Foreground="#ffffff"
+                    FontFamily="Cascadia Mono" 
+                    FontSize="20" 
+                    HorizontalAlignment="Left"
+                    Margin="118,339,0,0"
+                    VerticalAlignment="Top" 
+                    Checked="Select" 
+                    Unchecked="Unselect"
+                    Style="{StaticResource styleCustomCheckBox}" Width="270" Height="26" Grid.Column="1" />
+
+                <CheckBox
+                    Content="Одиночество"
+                    Foreground="#ffffff"
+                    FontFamily="Cascadia Mono" 
+                    FontSize="20" 
+                    HorizontalAlignment="Left"
+                    Margin="714,370,0,0"
+                    VerticalAlignment="Top" 
+                    Checked="Correct_Select" 
+                    Unchecked="Correct_Unselect"
+                    Style="{StaticResource styleCustomCheckBox}" Width="243" Height="26" Grid.Column="1" />
+
+                <CheckBox
+                    Content="Сам с собой"
+                    Foreground="#ffffff"
+                    FontFamily="Cascadia Mono" 
+                    FontSize="20" 
+                    HorizontalAlignment="Left"
+                    Margin="714,308,0,0"
+                    VerticalAlignment="Top" 
+                    Checked="Correct_Select" 
+                    Unchecked="Correct_Unselect"
+                    Style="{StaticResource styleCustomCheckBox}" Width="268" Height="26" Grid.Column="1" />
+
+
+                <Button x:Name="buttonCheck7"
+                    Content="Проверить" 
+                    HorizontalAlignment="Left" 
+                    Background="White"
+                    Foreground="#3f51b5"
+                    FontFamily="Cascadia Mono"
+                    FontSize="27"
+                    FontWeight="Bold"
+                    Margin="283,439,0,0" 
+                    VerticalAlignment="Top" 
+                    Width="210" 
+                    Height="50"
+                    Style="{StaticResource FlatButton}" 
+                    Click="ButtonCheck7_Click" 
+                    Grid.Column="1"/>
+
+                <Button x:Name="buttonNext7"
+                    Content="-" 
+                    IsEnabled="False"
+                    HorizontalAlignment="Left" 
+                    Background="White"
+                    Foreground="#3f51b5"
+                    FontFamily="Cascadia Mono"
+                    FontSize="27"
+                    FontWeight="Bold"
+                    Margin="573,439,0,0" 
+                    VerticalAlignment="Top" 
+                    Width="210" 
+                    Height="50"
+                    Style="{StaticResource FlatButton}"  
+                    Click="ButtonNext7_Click" 
+                    Grid.Column="1"/>
+
+            </Grid>
+        </Grid>
+
+
+        <!-- 8 eight -->
+        <Grid Grid.Row="1" Visibility="Hidden" Background="#3f51b5" x:Name="grid8">
+            <Grid Margin="0,0,0,330" Background="White">
+                <Image HorizontalAlignment="Left" Margin="751,0,0,0" VerticalAlignment="Center" Source="img/img16.jpg" Height="214" Width="271"/>
+                <Image HorizontalAlignment="Left" Margin="192,0,0,0" VerticalAlignment="Center" Source="img/img17.jpg" Height="214" Width="322"/>
+            </Grid>
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="71*"/>
+                    <ColumnDefinition Width="1130*"/>
+                </Grid.ColumnDefinitions>
+
+                <CheckBox
+                    Content="Летнее настроение"
+                    Foreground="#ffffff"
+                    FontFamily="Cascadia Mono" 
+                    FontSize="20" 
+                    HorizontalAlignment="Left"
+                    Margin="118,308,0,0"
+                    VerticalAlignment="Top" 
+                    Checked="Select" 
+                    Unchecked="Unselect"
+                    Style="{StaticResource styleCustomCheckBox}" Width="270" Height="26" Grid.Column="1"/>
+
+                <CheckBox
+                    Content="Дождь"
+                    Foreground="#ffffff"
+                    FontFamily="Cascadia Mono" 
+                    FontSize="20" 
+                    HorizontalAlignment="Left"
+                    Margin="424,308,0,0"
+                    VerticalAlignment="Top" 
+                    Checked="Select" 
+                    Unchecked="Unselect"
+                    Style="{StaticResource styleCustomCheckBox}" Width="254" Height="26" Grid.Column="1" />
+
+                <CheckBox
+                    Content="Все серое"
+                    Foreground="#ffffff"
+                    FontFamily="Cascadia Mono" 
+                    FontSize="20" 
+                    HorizontalAlignment="Left"
+                    Margin="424,339,0,0"
+                    VerticalAlignment="Top" 
+                    Checked="Select" 
+                    Unchecked="Unselect"
+                    Style="{StaticResource styleCustomCheckBox}" Width="285" Height="26" Grid.Column="1" />
+
+                <CheckBox
+                    Content="Торжество"
+                    Foreground="#ffffff"
+                    FontFamily="Cascadia Mono" 
+                    FontSize="20" 
+                    HorizontalAlignment="Left"
+                    Margin="118,370,0,0"
+                    VerticalAlignment="Top" 
+                    Checked="Correct_Select" 
+                    Unchecked="Correct_Unselect"
+                    Style="{StaticResource styleCustomCheckBox}" Width="270" Height="26" Grid.Column="1" />
+
+                <CheckBox
+                    Content="Светиться от счастья"
+                    Foreground="#ffffff"
+                    FontFamily="Cascadia Mono" 
+                    FontSize="20" 
+                    HorizontalAlignment="Left"
+                    Margin="424,370,0,0"
+                    VerticalAlignment="Top" 
+                    Checked="Correct_Select" 
+                    Unchecked="Correct_Unselect"
+                    Style="{StaticResource styleCustomCheckBox}" Width="271" Height="26" Grid.Column="1" />
+
+                <CheckBox
+                    Content="Хочу домой"
+                    Foreground="#ffffff"
+                    FontFamily="Cascadia Mono" 
+                    FontSize="20" 
+                    HorizontalAlignment="Left"
+                    Margin="714,339,0,0"
+                    VerticalAlignment="Top" 
+                    Checked="Select" 
+                    Unchecked="Unselect"
+                    Style="{StaticResource styleCustomCheckBox}" Width="225" Height="26" Grid.Column="1"/>
+
+                <CheckBox
+                    Content="Хорошее настроение "
+                    Foreground="#ffffff"
+                    FontFamily="Cascadia Mono" 
+                    FontSize="20" 
+                    HorizontalAlignment="Left"
+                    Margin="118,339,0,0"
+                    VerticalAlignment="Top" 
+                    Checked="Correct_Select" 
+                    Unchecked="Correct_Unselect"
+                    Style="{StaticResource styleCustomCheckBox}" Width="270" Height="26" Grid.Column="1" />
+
+                <CheckBox
+                    Content="Хочу в тень"
+                    Foreground="#ffffff"
+                    FontFamily="Cascadia Mono" 
+                    FontSize="20" 
+                    HorizontalAlignment="Left"
+                    Margin="714,370,0,0"
+                    VerticalAlignment="Top" 
+                    Checked="Select" 
+                    Unchecked="Unselect"
+                    Style="{StaticResource styleCustomCheckBox}" Width="243" Height="26" Grid.Column="1" />
+
+                <CheckBox
+                    Content="У них все получится"
+                    Foreground="#ffffff"
+                    FontFamily="Cascadia Mono" 
+                    FontSize="20" 
+                    HorizontalAlignment="Left"
+                    Margin="714,308,0,0"
+                    VerticalAlignment="Top" 
+                    Checked="Select" 
+                    Unchecked="Unselect"
+                    Style="{StaticResource styleCustomCheckBox}" Width="268" Height="26" Grid.Column="1" />
+
+
+                <Button x:Name="buttonCheck8"
+                    Content="Проверить" 
+                    HorizontalAlignment="Left" 
+                    Background="White"
+                    Foreground="#3f51b5"
+                    FontFamily="Cascadia Mono"
+                    FontSize="27"
+                    FontWeight="Bold"
+                    Margin="283,439,0,0" 
+                    VerticalAlignment="Top" 
+                    Width="210" 
+                    Height="50"
+                    Style="{StaticResource FlatButton}" 
+                    Click="ButtonCheck8_Click" 
+                    Grid.Column="1"/>
+
+                <Button x:Name="buttonNext8"
+                    Content="-" 
+                    IsEnabled="False"
+                    HorizontalAlignment="Left" 
+                    Background="White"
+                    Foreground="#3f51b5"
+                    FontFamily="Cascadia Mono"
+                    FontSize="27"
+                    FontWeight="Bold"
+                    Margin="573,439,0,0" 
+                    VerticalAlignment="Top" 
+                    Width="210" 
+                    Height="50"
+                    Style="{StaticResource FlatButton}"  
+                    Click="ButtonNext8_Click" 
+                    Grid.Column="1"/>
+
+            </Grid>
+        </Grid>
+
+
+        <!-- END -->
+        <Grid Grid.Row="1" Visibility="Hidden" Background="#3f51b5" x:Name="gridEnd">
+            <Label 
+                FontFamily="Cascadia Mono" 
+                FontSize="20" 
+                Foreground="#bbdefb"
+                HorizontalAlignment="Center"
+                HorizontalContentAlignment="Stretch"
+                VerticalAlignment="Center" Width="850" Height="216"/>
+
+            <TextBlock 
+                TextWrapping="Wrap" 
+                Foreground="#bbdefb"
+                FontFamily="Cascadia Mono" 
+                FontSize="20" 
+                HorizontalAlignment="Center"
+                Text="Природа и искусство – два понятия, которые кажутся разными, но на самом деле тесно связаны. Природа – это источник всего, что существует на земле. Ее язык загадочен и разнообразен. Природа – это искусство Бога. Врач лечит, природа исцеляет. Искусство – это способ выражения человеческой души. Художник, поэт, музыкант, скульптор и другие творцы черпают вдохновение из природы. Они пытаются передать ее красоту, гармонию, мудрость и силу в своих произведениях. Искусство – это природа, вдохновившая творца. Природа и искусство обогащают нашу жизнь. Они помогают нам познать себя и мир вокруг. Они дарят нам радость, умиротворение, восхищение и любовь. Природа и искусство – это две стороны одной медали, которую мы называем культурой."
+                TextAlignment="Justify"
+                VerticalAlignment="Top" 
+                Width="820" Height="305" Margin="0,160,0,0"/>
+
+            <Label 
+                FontSize="40" 
+                FontFamily="Cascadia Mono" 
+                Content="Вы успешно все прошли!" 
+                Foreground="White"
+                HorizontalAlignment="Center" 
+                HorizontalContentAlignment="Center"
+                Margin="0,62,0,0" 
+                VerticalAlignment="Top" 
+                Height="58" 
+                Width="556"/>
+
+
+
+            <Button x:Name="buttonEnd"
+                Content="Выйти" 
+                HorizontalAlignment="Center" 
+                Background="White"
+                Foreground="#3f51b5"
+                FontFamily="Cascadia Mono"
+                FontSize="27"
+                FontWeight="Bold"
+                Margin="0,492,0,0" 
+                VerticalAlignment="Top" 
+                Width="146" 
+                Height="50"
+                    
+                Style="{StaticResource FlatButton}" Click="buttonExit_Click"/>
+
+        </Grid>
+
 
         <!-- TextBlock -->
         <TextBlock x:Name="textBlock"
